@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="aiagent"
+version="1.0"
+displayName="AI Agent Mod"
+description='''Forge mod để điều khiển Minecraft bằng AI'''
