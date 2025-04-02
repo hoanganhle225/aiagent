@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from sklearn.preprocessing import LabelEncoder
+import joblib
 
 class MinecraftDataset(Dataset):
     def __init__(self, folder_path):
@@ -82,6 +83,8 @@ def train():
 
     torch.save(model.state_dict(), "ai_model.pt")
     print("✅ Đã huấn luyện xong và lưu model tại ai_model.pt")
+    joblib.dump(dataset.label_encoder, "label_encoder.pkl")
+    print("✅ Saved label encoder to label_encoder.pkl")
 
 if __name__ == "__main__":
     train()
